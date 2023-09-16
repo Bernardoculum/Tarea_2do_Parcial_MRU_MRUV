@@ -222,7 +222,7 @@ input {
     padding-bottom: 10px ;
     
 
-    background:url(/IMAGE/fondofisica.jpg) no-repeat center top;
+    background:url(./IMAGE/fondofisica.jpg) no-repeat center top;
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -237,7 +237,7 @@ input {
   }
 
 footer{
-   background:url(/IMAGE/fondofisica.jpg) no-repeat center top;
+   background:url(./IMAGE/fondofisica.jpg) no-repeat center top;
    background-size: cover; 
    background-repeat: no-repeat; 
    background-position: center; 
