@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <title>Estudio de MRU y MRUV</title>
+</head>
+
+<body>
+    <header>
+        
+        <nav>
+            <a href="#MRU"><button class="btnMR"> MRU</button></a> 
+            
+            <a href="#MRUA"><button class="btnMR"> MRUV</button></a> 
+        </nav>
+    
+    </header>
+
+    <main>
+
+        <h2 id="MRU" >MRU - Movimiento Rectilíneo Uniforme</h2>
+        <p>El movimiento rectilíneo uniforme (m.r.u.), es aquel con velocidad constante y cuya trayectoria es una línea
+            recta. Un ejemplo claro son las puertas correderas de un ascensor, generalmente se abren y cierran en línea
+            recta y siempre a la misma velocidad.</p>
+       
+        <p>En física, el movimiento rectilíneo uniforme puede ser observado dentro de un plano, en un eje de
+            coordenadas, donde el movimiento es en línea recta desplazándose hacia una dirección. Es uniforme porque las
+            variables de velocidad y tiempo en la recta es constante</p>
+            <p>Las fórmulas del movimiento rectilíneo uniforme contempla tres incógnitas: Velocidad constante (V), Distancia
+                (d) y Tiempo (t).</p>
+                <hr>
+        <section class="division1" >
+
+            <section>
+                <h2 class="titulo">CONCEPTO DISTANCIA</h2>
+                <p>Es la magnitud escalar que determina la posición de un cuerpo en una dirección dada.
+                    En el MRU, la distancia recorrida varía de forma proporcional al tiempo transcurrido, ya que la
+                    velocidad es constante.</p>
+               <div><img src="./IMAGE/distancia.png" alt=""></div> 
+            </section>
+            <section class="fondosection">
+                
+                <h2>Calcular Distancia (d)</h2>
+                <form id="mru-distancia">
+                    <label for="velocidad">Velocidad (m/s):</label>
+                    <input type="number" id="velocidad" step="0.01" required>
+                    <br>
+                    <label for="tiempo">Tiempo (s):</label>
+                    <input type="number" id="tiempo" step="0.01" required>
+                    <br>
+                    <button type="button" onclick="calcularDistancia()">Calcular</button>
+                </form>
+                <div id="resultado-distancia"></div>
+            </section>
+                
+            <section>
+                
+                <h2 class="titulo">CONCEPTO VELOCIDAD</h2>
+                <p>Es la magnitud vectorial que determina el cambio de posición de un cuerpo con respecto al tiempo.
+                    En el MRU, la velocidad es constante, es decir, no varía con el tiempo.
+                    Su unidad es el m/s.</p>
+                <div><img src="./IMAGE/velocidad.png" alt=""></div>
+            </section>
+            
+            <section class="fondosection">
+                
+                <h2>Calcular Velocidad (v)</h2>
+                <form id="mru-velocidad">
+                    <label for="distancia">Distancia (m):</label>
+                    <input type="number" id="distanciaV" step="0.01" required>
+                    <br>
+                    <label for="tiempo">Tiempo (s):</label>
+                    <input type="number" id="tiempoV" step="0.01" required>
+                    <br>
+                    <button type="button" onclick="calcularVelocidad()">Calcular</button>
+                </form>
+                <div id="resultado-velocidad"></div>
+            </section>
+
+            <section>
+                <h2 class="titulo">CONCEPTO TIEMPO</h2>
+                <p>Es la magnitud escalar que indica la duración de un proceso.
+                    En el MRU, el tiempo transcurre de manera uniforme, es decir, no se acelera ni se retarda.
+                    Sus unidades son los segundos (s).
+                    Aparece en las fórmulas del MRU ya que es el factor que determina cuánto se desplaza un cuerpo en
+                    función de su velocidad constante.</p>
+                <div><img src="./IMAGE/tiempo.png" alt=""></div>
+            </section>
+            <section class="fondosection">
+                <h2>Calcular Tiempo (t)</h2>
+                <form id="mru-tiempo">
+                    <label for="distancia">Distancia (m):</label>
+                    <input type="number" id="distanciaT" step="0.01" required>
+                    <br>
+                    <label for="velocidad">Velocidad (m/s):</label>
+                    <input type="number" id="velocidadT" step="0.01" required>
+                    <br>
+                    <button type="button" onclick="calcularTiempo()">Calcular</button>
+                </form>
+                <div id="resultado-tiempo"></div>
+            </section>
+
+        </section>
+        <hr>
+        <h2 id="MRUA">MRUV - Movimiento Rectilíneo Uniformemente Variado</h2>
+        <p>Como su nombre lo sugiere, el "Movimiento Rectilíneo Uniforme Acelerado (MRUA)" es el tipo de movimiento que
+            se produce cuando se acelera un móvil. La aceleración se define como "el cambio de velocidad" durante un
+            cierto período de tiempo, por lo que siempre hay un movimiento acelerado. </p>
+
+            <p>Estas son algunas características del Movimiento Rectilíneo Uniforme Acelerado:</p>
+
+           <p> La trayectoria es en linea recta, no cambia la dirección de la velocidad.
+            La velocidad cambia constantemente en relación a la aceleración, la velocidad aumenta o disminuye
+            dependiendo si la aceleración es positiva o negativa.
+            La aceleración es diferente de cero.</p>
+
+        <section class="division1">
+            <section>
+                <h2 class="titulo">CONCEPTO VELOCIDAD INICIAL</h2>
+                <p>Es la velocidad con la que un cuerpo inicia su movimiento acelerado.
+                    Su valor se toma en el instante inicial del movimiento (t=0).
+                    Sus unidades son m/s.</p>
+                <div><img src="./IMAGE/VeloInicial.png" alt=""></div>
+            </section>
+            <section class="fondosection">
+                <h2>Calcular Velocidad Inicial</h2>
+                <form id="velocidadInicialForm">
+                    <label for="velocidadFinal">Velocidad Final (m/s):</label>
+                    <input type="number" id="velocidadFinal" step="0.01" required><br>
+
+                    <label for="aceleracion">Aceleración (m/s):</label>
+                    <input type="number" id="aceleracion2" step="0.01" required><br>
+
+                    <label for="tiempo">Tiempo (s):</label>
+                    <input type="number" id="tiempo2" step="0.01" required><br>
+
+                    <button type="button" onclick="calcularVelocidadInicial()">Calcular</button><br>
+
+
+                </form>
+                <div id="resultadoVelocidadInicial"></div>
+            </section>
+
+            <section>
+                <h2 class="titulo">CONCEPTO VELOCIDAD FINAL</h2>
+                <p>Es la velocidad con la que el cuerpo termina su movimiento una vez ha transcurrido cierto tiempo bajo
+                    la acción de una aceleración constante.
+                    Su valor depende de la velocidad inicial, la aceleración y el tiempo transcurrido</p>
+                <div><img src="./IMAGE/Velofinal.png" alt=""></div>
+            </section>
+            <section class="fondosection">
+                <h2>Calcular Velocidad Final</h2>
+                <form id="velocidadFinalForm">
+                    <label for="velocidadInicial">Velocidad Inicial (m/s):</label>
+                    <input type="number" id="velocidadInicial" step="0.01" required><br>
+
+                    <label for="aceleracion">Aceleración (m/s):</label>
+                    <input type="number" id="aceleracion3" step="0.01" required><br>
+
+                    <label for="tiempo">Tiempo (s):</label>
+                    <input type="number" id="tiempo3" step="0.01" required><br>
+
+                    <button type="button" onclick="calcularVelocidadFinal()">Calcular</button><br>
+
+
+                </form>
+                <div id="resultadoVelocidadFinal"></div>
+            </section>
+
+            <section>
+                <h2 class="titulo">CONCEPTO CALCULO DE TIEMPO</h2>
+                <p>Es la magnitud escalar que indica la duración del proceso de aceleración constante.
+                    Sus unidades son segundos (s).
+                    Aparece en las ecuaciones que relacionan las variables del movimiento, ya que es el factor que
+                    determina el cambio en velocidad y posición.</p>
+                <div><img src="./IMAGE/tiempoMRU.png" alt=""></div>
+            </section>
+            <section class="fondosection">
+                <h2>Calcular Tiempo</h2>
+                <form id="TiempoForm">
+                    <label for="VelFinal">Velocidad Final (m/s):</label>
+                    <input type="number" id="velfinal" step="0.01" required><br>
+
+                    <label for="VelInicio">Velocidad Objeto Inicial (m/s):</label>
+                    <input type="number" id="velobjeto" step="0.01" required><br>
+
+                    <label for="acel">Aceleración:</label>
+                    <input type="number" id="aceleracionM" step="0.01" required><br>
+
+                    <button type="button" onclick="calculartiempoMi()">Calcular</button><br>
+
+
+                </form>
+                <div id="resultado_tiempo"></div>
+            </section>
+        </section>
+    </main>
+
+
+
+
+
+    <footer>
+        <p>Nombre : Bernardo Vicente Hildebrando Culum Ratzam</p>
+        <p>Carnet : 2290-20-10772</p>
+        <p>Curso : Desarrollo WEB</p>
+       
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
